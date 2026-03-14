@@ -1,0 +1,18 @@
+import CompanyLogos from './CompanyLogos'
+import React from 'react'
+import LoginErrorCard from './LoginErrorCard'
+
+export default function ErrorTopBanner() {
+  return (
+    <div>
+        <div className='absolute left-0 right-0 z-50 text-center py-5 sm:py-4 text-[#dc3545] bg-[#ffeceb] text-xs sm:text-sm font-semibold'>
+        <div className='flex items-center justify-center gap-2 cursor-pointer'>
+        You do not have enough credits to perform this action
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.8" d="M5.5 11C2.46235 11 0 8.53765 0 5.5C0 2.46235 2.46235 0 5.5 0C8.53765 0 11 2.46235 11 5.5C11 8.53765 8.53765 11 5.5 11ZM5.5 9.9C6.66695 9.9 7.78611 9.43643 8.61127 8.61127C9.43643 7.78611 9.9 6.66695 9.9 5.5C9.9 4.33305 9.43643 3.21389 8.61127 2.38873C7.78611 1.56357 6.66695 1.1 5.5 1.1C4.33305 1.1 3.21389 1.56357 2.38873 2.38873C1.56357 3.21389 1.1 4.33305 1.1 5.5C1.1 6.66695 1.56357 7.78611 2.38873 8.61127C3.21389 9.43643 4.33305 9.9 5.5 9.9ZM5.5 4.7223L7.0554 3.16635L7.83365 3.9446L6.2777 5.5L7.83365 7.0554L7.0554 7.83365L5.5 6.2777L3.9446 7.83365L3.16635 7.0554L4.7223 5.5L3.16635 3.9446L3.9446 3.16635L5.5 4.7223Z" fill="#47545D"></path>
+        </svg>
+        </div>
+      </div>
+    </div>
+  )
+}

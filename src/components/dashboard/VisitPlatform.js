@@ -1,0 +1,116 @@
+'use client'
+import Image from 'next/image';
+import React from 'react'
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+export default function VisitPlatform() {
+
+   const CustomDot = ({ onClick, ...rest }) => {
+      const {
+        onMove,
+        index,
+        active,
+        carouselState: { currentSlide, deviceType }
+      } = rest;
+      const carouselItems = [
+        <div key={1} className='w-2 h-2  rounded-full'>
+          
+        </div>,
+        <div key={2} className='w-2 h-2  rounded-full'>
+          
+        </div>,
+        <div key={2} className='w-2 h-2  rounded-full'>
+          
+        </div>
+      ];
+      
+      return (
+        <button
+          className={active ? "active bg-[#a9afe2] rounded-full mx-1" : "inactive bg-[#a9afe2]/20 rounded-full mx-1"}
+          onClick={() => onClick()}
+        >
+          {React.Children.toArray(carouselItems)[index]}
+        </button>
+      );
+    };
+  
+    const responsive = {
+      desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 1,
+      },
+     
+    };
+  return (
+    <div className='hidden sm:block'>
+      <div>
+         <Carousel
+         className='pb-5 mb-2'
+          swipeable={true}
+          infinite={true}
+          arrows={false}
+          draggable={true}
+          showDots={true}
+          responsive={responsive}
+          ssr={true} 
+          autoPlay={true}
+          autoPlaySpeed={6900}
+          keyBoardControl={true}
+          customDot={<CustomDot />}
+        >
+          <div className='flex items-center justify-between py-5 px-4 rounded-3xl bg-[#c8e3da]/30'>
+            <div className='flex items-center gap-3'>
+                      <div className='bg-[#c8e3da] p-4 contain-content rounded-full'>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0005 6.49902V14.499C11.0005 15.2947 10.6844 16.0577 10.1218 16.6203C9.5592 17.183 8.79614 17.499 8.00049 17.499H5.83049C5.59458 18.1665 5.13029 18.7291 4.51968 19.0874C3.90907 19.4456 3.19146 19.5765 2.4937 19.4568C1.79593 19.3372 1.16294 18.9747 0.706614 18.4334C0.250285 17.8921 0 17.207 0 16.499C0 15.7911 0.250285 15.1059 0.706614 14.5647C1.16294 14.0234 1.79593 13.6609 2.4937 13.5412C3.19146 13.4215 3.90907 13.5524 4.51968 13.9107C5.13029 14.2689 5.59458 14.8315 5.83049 15.499H8.00049C8.26571 15.499 8.52006 15.3937 8.70759 15.2061C8.89513 15.0186 9.00049 14.7642 9.00049 14.499V6.49902C9.00049 5.70337 9.31656 4.94031 9.87917 4.3777C10.4418 3.81509 11.2048 3.49902 12.0005 3.49902H15.0005V0.499023L20.0005 4.49902L15.0005 8.49902V5.49902H12.0005C11.7353 5.49902 11.4809 5.60438 11.2934 5.79192C11.1058 5.97945 11.0005 6.23381 11.0005 6.49902ZM3.00049 17.499C3.2657 17.499 3.52006 17.3937 3.70759 17.2061C3.89513 17.0186 4.00049 16.7642 4.00049 16.499C4.00049 16.2338 3.89513 15.9795 3.70759 15.7919C3.52006 15.6044 3.2657 15.499 3.00049 15.499C2.73527 15.499 2.48092 15.6044 2.29338 15.7919C2.10584 15.9795 2.00049 16.2338 2.00049 16.499C2.00049 16.7642 2.10584 17.0186 2.29338 17.2061C2.48092 17.3937 2.73527 17.499 3.00049 17.499Z" fill="#1F674F"></path>
+                      </svg>
+                      </div>
+                      <p className=''>
+                      Sellers using more than three platforms see a 50% higher revenue growth rate.
+                      </p>
+                    </div>
+            <div className='mr-4'>
+                <button className='text-[#1F674F] font-semibold px-4 py-3 rounded-xl bg-[#c8e3da]'>Visit Platforms Page</button>
+            </div>
+          </div>
+
+          <div className='flex items-center justify-between py-5 px-4 rounded-3xl bg-[#c8e3da]/30'>
+            <div className='flex items-center gap-3'>
+                      <div className='bg-[#c8e3da] p-4 contain-content rounded-full'>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0005 6.49902V14.499C11.0005 15.2947 10.6844 16.0577 10.1218 16.6203C9.5592 17.183 8.79614 17.499 8.00049 17.499H5.83049C5.59458 18.1665 5.13029 18.7291 4.51968 19.0874C3.90907 19.4456 3.19146 19.5765 2.4937 19.4568C1.79593 19.3372 1.16294 18.9747 0.706614 18.4334C0.250285 17.8921 0 17.207 0 16.499C0 15.7911 0.250285 15.1059 0.706614 14.5647C1.16294 14.0234 1.79593 13.6609 2.4937 13.5412C3.19146 13.4215 3.90907 13.5524 4.51968 13.9107C5.13029 14.2689 5.59458 14.8315 5.83049 15.499H8.00049C8.26571 15.499 8.52006 15.3937 8.70759 15.2061C8.89513 15.0186 9.00049 14.7642 9.00049 14.499V6.49902C9.00049 5.70337 9.31656 4.94031 9.87917 4.3777C10.4418 3.81509 11.2048 3.49902 12.0005 3.49902H15.0005V0.499023L20.0005 4.49902L15.0005 8.49902V5.49902H12.0005C11.7353 5.49902 11.4809 5.60438 11.2934 5.79192C11.1058 5.97945 11.0005 6.23381 11.0005 6.49902ZM3.00049 17.499C3.2657 17.499 3.52006 17.3937 3.70759 17.2061C3.89513 17.0186 4.00049 16.7642 4.00049 16.499C4.00049 16.2338 3.89513 15.9795 3.70759 15.7919C3.52006 15.6044 3.2657 15.499 3.00049 15.499C2.73527 15.499 2.48092 15.6044 2.29338 15.7919C2.10584 15.9795 2.00049 16.2338 2.00049 16.499C2.00049 16.7642 2.10584 17.0186 2.29338 17.2061C2.48092 17.3937 2.73527 17.499 3.00049 17.499Z" fill="#1F674F"></path>
+                      </svg>
+                      </div>
+                      <p className=''>
+                      Sellers using more than three platforms see a 50% higher revenue growth rate.
+                      </p>
+                    </div>
+            <div className='mr-4'>
+                <button className='text-[#1F674F] font-semibold px-4 py-3 rounded-xl bg-[#c8e3da]'>Visit Platforms Page</button>
+            </div>
+          </div>
+
+
+          <div className='flex items-center justify-between py-5 px-4 rounded-3xl bg-[#c8e3da]/30'>
+            <div className='flex items-center gap-3'>
+                      <div className='bg-[#c8e3da] p-4 contain-content rounded-full'>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0005 6.49902V14.499C11.0005 15.2947 10.6844 16.0577 10.1218 16.6203C9.5592 17.183 8.79614 17.499 8.00049 17.499H5.83049C5.59458 18.1665 5.13029 18.7291 4.51968 19.0874C3.90907 19.4456 3.19146 19.5765 2.4937 19.4568C1.79593 19.3372 1.16294 18.9747 0.706614 18.4334C0.250285 17.8921 0 17.207 0 16.499C0 15.7911 0.250285 15.1059 0.706614 14.5647C1.16294 14.0234 1.79593 13.6609 2.4937 13.5412C3.19146 13.4215 3.90907 13.5524 4.51968 13.9107C5.13029 14.2689 5.59458 14.8315 5.83049 15.499H8.00049C8.26571 15.499 8.52006 15.3937 8.70759 15.2061C8.89513 15.0186 9.00049 14.7642 9.00049 14.499V6.49902C9.00049 5.70337 9.31656 4.94031 9.87917 4.3777C10.4418 3.81509 11.2048 3.49902 12.0005 3.49902H15.0005V0.499023L20.0005 4.49902L15.0005 8.49902V5.49902H12.0005C11.7353 5.49902 11.4809 5.60438 11.2934 5.79192C11.1058 5.97945 11.0005 6.23381 11.0005 6.49902ZM3.00049 17.499C3.2657 17.499 3.52006 17.3937 3.70759 17.2061C3.89513 17.0186 4.00049 16.7642 4.00049 16.499C4.00049 16.2338 3.89513 15.9795 3.70759 15.7919C3.52006 15.6044 3.2657 15.499 3.00049 15.499C2.73527 15.499 2.48092 15.6044 2.29338 15.7919C2.10584 15.9795 2.00049 16.2338 2.00049 16.499C2.00049 16.7642 2.10584 17.0186 2.29338 17.2061C2.48092 17.3937 2.73527 17.499 3.00049 17.499Z" fill="#1F674F"></path>
+                      </svg>
+                      </div>
+                      <p className=''>
+                      Sellers using more than three platforms see a 50% higher revenue growth rate.
+                      </p>
+                    </div>
+            <div className='mr-4'>
+                <button className='text-[#1F674F] font-semibold px-4 py-3 rounded-xl bg-[#c8e3da]'>Visit Platforms Page</button>
+            </div>
+          </div>
+          
+        </Carousel>
+      </div>
+    </div>
+  )
+}
