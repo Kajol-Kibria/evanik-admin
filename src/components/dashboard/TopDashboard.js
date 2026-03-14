@@ -1,17 +1,10 @@
 'use client';
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { IoIosSearch } from "react-icons/io";
 import { DateRangePicker } from './CustomDateRangePicker';
-import useProfileStore from '@/app/stores/user-service/profile-store';
 
 export default function TopDashboard() {
-  const { fetchMyProfile, data } = useProfileStore();
-
-  useEffect(() => {
-    fetchMyProfile();
-  }, []);
-
   return (
     <div>
       <div className='sm:flex justify-between w-full items-center'>
