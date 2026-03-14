@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import TextField from "@mui/material/TextField";
 import { login } from '@/api/index';
 

@@ -5,7 +5,6 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import CompanyLogos from '@/components/logincomponents/CompanyLogos';
 import SideCarousel from '@/components/logincomponents/SideCarousel';
-import { motion } from 'framer-motion';
 import { Lock, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import { setPassword } from '@/api/index';
 

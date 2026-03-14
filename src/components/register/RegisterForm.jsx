@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FaUser, FaEnvelope, FaBuilding, FaPhone, FaMapPin } from 'react-icons/fa';
 import Image from 'next/image';
-import { register, resendVerification } from '@/api/index';
+import { register } from '@/api/index';
 
 const FormInput = ({ icon: Icon, name, placeholder, value, onChange, required, pattern, type = "text" }) => (
     <div className="relative">
